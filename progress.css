@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'playfair';
+    src: url(fonts/PlayfairDisplaySC-Bold.woff2);
+}
+@font-face {
+    font-family: 'playfairREG';
+    src: url(fonts/PlayfairDisplaySC-Regular.ttf);
+}
+body,
+html {
+    width: 100%;
+    height: 999px;
+    background-color: #EBC4AC;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10vw;
+    max-height: 83px;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.line{
+    height: 65%;
+    width: 0.08vw;
+}
+
+.el {
+    height: 65%;
+    min-width: 100px;
+    width: 20vw;
+    max-width: 220px;
+    border: 0;
+    background-color: #EBC4AC;
+}
+
+.in {
+    font-family: 'playfairREG';
+    font-size: clamp(0px, 2vw, 30px);
+}
+
+.main_inner::before {
+    content: url(images/Home.svg);
+    margin-right: 0.5em;
+}
+
+.mot_inner::before {
+    content: url(images/Zap.svg);
+    margin-right: 0.5em;
+}
+
+.train_inner::before {
+    content: url(images/Star.svg);
+    margin-right: 0.5em;
+
+}
+
+.prog_inner::before {
+    content: url(images/Icon.svg);
+    margin-right: 0.5em;
+}
+
+.white_theme{
+    color: #fde2d1;
+}
+
+#progress{
+    border-bottom: 0.1vw solid black;
+    padding-bottom: 0.5vw;
+}
+.middle_line{
+    position: absolute;
+    height: 50vw;
+    top: 10vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+}
+.nutritionTitle{
+    position: relative;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+    padding-top: 10vw;
+    font-family: 'playfairREG';
+    font-size: clamp(0px, 2vw, 30px);
+}
+.paramT{
+    position: relative;
+    font-family: 'playfairREG';
+    font-size: clamp(0px, 2vw, 30px);
+    font-weight: bold;
+}
+.leftpart{
+    width: 48%;
+}
+.params{
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    padding-top: 5vw;
+    transform: translateX(-50%);
+}
+.p{
+    border: none;
+    background-color: transparent;
+    padding-left: 1vw;
+    font-family: 'playfairREG';
+    font-size: clamp(0px, 2vw, 30px);
+}
+.p:focus{
+    outline: none;
+}
+.PflexC{
+    display: flex;
+    flex-direction: row;
+}
+.Greating{
+    font-size: clamp(10px, 3vw, 60px);
+}
+.submitParams{
+    font-family: 'playfairREG';
+    font-size: clamp(0px, 2vw, 30px);
+    margin-top: 2vw;
+    padding: 0.5vw;
+    background-color: #e5b79b;
+    border-radius: 0.3em;
+}
+.white_theme_for_Sub{
+    background-color: #fadcc9;
+}
+.dn{
+    display: none;
+}
+.right_half{
+    position: absolute;
+    right: 0;
+    width: 48%;
+    top: 15vw;
+}
+.wrapperRH{
+    position: relative;
+    font-family: 'playfairREG';
+    font-size: clamp(0px, 2vw, 30px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dietT{
+    font-size: clamp(10px, 3vw, 60px);
+}

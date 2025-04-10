@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'playfair';
+    src: url(fonts/PlayfairDisplaySC-Bold.woff2);
+}
+@font-face {
+    font-family: 'playfairREG';
+    src: url(fonts/PlayfairDisplaySC-Regular.ttf);
+}
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #EBC4AC;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10vw;
+    max-height: 83px;
+    border: 0;
+    box-sizing: border-box;
+}
+#main{
+    border-bottom: 0.1vw solid black;
+    padding-bottom: 0.5vw;
+}
+
+.line{
+    height: 65%;
+    width: 0.08vw;
+}
+
+.el {
+    height: 65%;
+    min-width: 100px;
+    width: 20vw;
+    max-width: 220px;
+    border: 0;
+    background-color: #EBC4AC;
+}
+
+.in {
+    font-family: 'playfairREG';
+    font-size: clamp(0px, 2vw, 30px);
+}
+
+.main_inner::before {
+    content: url(images/Home.svg);
+    margin-right: 0.5em;
+}
+
+.mot_inner::before {
+    content: url(images/Zap.svg);
+    margin-right: 0.5em;
+}
+
+.train_inner::before {
+    content: url(images/Star.svg);
+    margin-right: 0.5em;
+
+}
+
+.prog_inner::before {
+    content: url(images/Icon.svg);
+    margin-right: 0.5em;
+}
+
+.wrapper {
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    margin: 0;
+    background: url(images/Left_man.png) no-repeat,
+        url(images/Right_man.png) no-repeat;
+    background-size: contain, contain;
+    background-position: left bottom, right bottom;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    font-size: clamp(0px, 8vw, 100px);
+    font-family: 'playfair';
+    margin-top: 5vw;
+}
+
+.title::before {
+    content: '';
+    background: url(images/left_element.svg);
+    margin-right: 0.5em;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    width: 16vw;
+    max-width: 300px;
+    height: 4vw;
+    max-height: 100px;
+}
+
+.title::after {
+    content: '';
+    background: url(images/right_element.svg);
+    margin-left: 0.5em;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    width: 16vw;
+    max-width: 300px;
+    height: 4vw;
+    max-height: 100px;
+}
+.text{
+    font-family: 'playfairREG' ;
+    position: relative;
+    font-size: clamp(15px, 2vw, 25px);
+    width: 50vw;
+    text-align: center;
+    left: 25vw;
+    padding-top: 7vw;
+}
+.footer{
+    height: 20vh;
+}
+.footer_line{
+    width: 100%;
+    height: 3px;
+    position: relative;
+    bottom: 12px;
+}
+.foot_in{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'playfairREG' ;
+    position: relative;
+    font-size: clamp(15px, 2vw, 18px);
+    top: 4vh;
+    text-align: center;
+}
+@media (max-width: 650px){
+    .wrapper{
+        background: url(images/Right_man.png) no-repeat;
+        background-position: right bottom;
+        background-size: contain;
+    }
+}
+
+.white_theme{
+    color: #fde2d1;
+}

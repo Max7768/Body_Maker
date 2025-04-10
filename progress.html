@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progress</title>
+    <link rel="stylesheet" href="progress.css">
+</head>
+<body>
+    <div class="header">
+        <button class="main el" id="main">
+            <div class="main_inner in">Главная</div>
+        </button>
+        <img  class = 'line' src = 'images/Line 2.png'>
+        <button class="motivation el" id="motivation">
+            <div class="mot_inner in">Стимул</div>
+        </button>
+        <img class = 'line' src = 'images/Line 2.png'>
+        <button class="training el" id="training">
+            <div class="train_inner in">Техника</div>
+        </button>
+        <img class = 'line' src = 'images/Line 2.png'>
+        <button class="progress el" id = 'progress'>
+            <div class="prog_inner in">Питание</div>
+        </button>
+    </div>
+    <img src="images/Line 2.png" alt="Линия" class="middle_line">
+    <div class="leftpart">
+        <div class="nutritionTitle"><b class="Greating">Добро Пожаловать!</b><br>Здесь вы можете получить актуальную информацию о своих нормах питания, основывающуюся на физических показателях.</div>
+        <div class="params">
+            <div class="PflexC">
+                <div class="paramT">Рост:</div>
+                <input type="number" class="heightP p">
+            </div>
+            <div class="PflexC">
+                <div class="paramT">Вес:</div>
+                <input type="number" class="weightP p">
+            </div>
+            <div class="PflexC">    
+                <div class="paramT">Возраст:</div>
+                <input type="number" class="ageP p">
+            </div>
+            <button class="submitParams">Подтвердить</button>
+        </div>
+        
+        <script>
+            const submitButton = document.querySelector('.submitParams')
+            submitButton.addEventListener('mouseover', () => {
+            submitButton.classList.add('white_theme_for_Sub')
+            }
+            )
+            submitButton.addEventListener('mouseout', () => {
+            submitButton.classList.remove('white_theme_for_Sub')
+            }
+            )
+            submitButton.addEventListener('click', () => {
+                const height = document.querySelector('.heightP')
+                const weight = document.querySelector('.weightP')
+                const age = document.querySelector('.ageP')
+
+                const cal = 10 * weight.value + 6.25*height.value - 5*age.value
+                const calories = document.querySelector('.calories')
+                calories.innerText = `Дневная норма калорий: ${cal}`
+                const bju = document.querySelector('.bju')
+                bju.innerText = `Количество БЖУ для поддержания веса: ${(0.2*cal).toFixed(2)}, ${(0.3*cal).toFixed(2)}, ${(0.5*cal).toFixed(2)}`
+                const rh = document.querySelector('.right_half')
+                rh.classList.remove('dn')
+            })
+        </script>
+    </div>
+    <div class="right_half dn">
+        <div class="wrapperRH">
+            <b class="dietT">Советы по питанию</b>
+            <div class="calories"></div>
+            <div class="bju"></div>
+            <div>-----------</div>
+            <div class="alert">Внимание, данные показатели объективны для лиц от 13 до 80 лет. Женская норма потребления калорий меньше на 160 единиц => БЖУ меньше на 32, 48 и 80 соответственно</div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
